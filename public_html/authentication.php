@@ -16,9 +16,9 @@ $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $count = mysqli_num_rows($result);
 if ($count == 1) {   
     // echo "<h3>Login successful! <a href='/survey'>Homepage</a></h3>";
-    header("Location: /survey"); // Redirect to a welcome page on success
+    header("Location:firstPage.php"); // Redirect to a welcome page on success
     exit();
 } else {
-    echo "<h1>Login failed. Invalid username or password.</h1>";
+    echo '<script type="text/javascript">alert("Login Failed! please recheck username and password  ");</script>';
 }
 ?>

@@ -13,5 +13,5 @@
         } else {
             echo "<h3>Registration failed: " . mysqli_error($con) . "</h3>";
         }
-    }
+    } 
     ?>

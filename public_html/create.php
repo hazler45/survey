@@ -1,5 +1,5 @@
 <?php
-include('connection.php'); // Include the database connection file
+include('connection.php'); 
 
 $msg = '';
 
@@ -9,27 +9,28 @@ if (!empty($_POST)) {
 
     // Insert new record into the "polls" table
     $sql = "INSERT INTO polls (title, description) VALUES ('$title', '$description')";
-    $result = mysqli_query($con, $sql); // Use $con instead of $mysqli
+    $result = mysqli_query($con, $sql); 
 
     if ($result) {
-        $poll_id = mysqli_insert_id($con); // Use $con instead of $mysqli
+        $poll_id = mysqli_insert_id($con); 
 
         $answers = isset($_POST['answers']) ? explode(PHP_EOL, $_POST['answers']) : '';
 
         foreach ($answers as $answer) {
-            if (empty($answer)) continue;
+            if (empty($answer))
+                continue;
 
             $sql = "INSERT INTO poll_answers (poll_id, title) VALUES ($poll_id, '$answer')";
-            mysqli_query($con, $sql); // Use $con instead of $mysqli
+            mysqli_query($con, $sql); 
         }
 
         $msg = 'Created Successfully!';
     } else {
-        $msg = 'Error: ' . mysqli_error($con); // Use $con instead of $mysqli
+        $msg = 'Error: ' . mysqli_error($con); 
     }
 }
-
-mysqli_close($con); // Close the MySQLi connection
+// Close the MySQLi connection
+mysqli_close($con); 
 ?>
 <html>
 <div class="content update">
@@ -48,7 +49,7 @@ mysqli_close($con); // Close the MySQLi connection
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
         }
-    
+
         .content {
             background-color: #fff;
             border: 1px solid #ccc;
@@ -57,17 +58,17 @@ mysqli_close($con); // Close the MySQLi connection
             margin: 20px auto;
             width: 50%;
         }
-    
+
         h2 {
             color: #333;
         }
-    
+
         label {
             display: block;
             margin-top: 10px;
             font-weight: bold;
         }
-    
+
         input[type="text"],
         textarea {
             width: 100%;
@@ -76,30 +77,30 @@ mysqli_close($con); // Close the MySQLi connection
             border: 1px solid #ccc;
             border-radius: 3px;
         }
+
         textarea {
             height: 100px;
         }
-    
+
         input[type="submit"] {
-            background-color: #007bff;
+            background-color: #376ab7;
             color: #fff;
             padding: 10px 15px;
             border: none;
             border-radius: 3px;
             cursor: pointer;
+            margin-top: 20px;
         }
-    
+
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
-    
+
         p {
             color: green;
         }
     </style>
-    
-    </div>
-   </html>
 
+</div>
 
-
+</html>

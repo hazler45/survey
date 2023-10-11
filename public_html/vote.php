@@ -1,5 +1,5 @@
 <?php
-include 'connection.php'; // Include the database connection file
+include 'connection.php'; 
 
 if (isset($_GET['id'])) {
     // MySQL query that selects the poll records by the GET request "id"
@@ -18,8 +18,7 @@ if (isset($_GET['id'])) {
         $result = $stmt->get_result();
         // Fetch all the poll answers
         $poll_answers = $result->fetch_all(MYSQLI_ASSOC);
-        
-        // If the user clicked the "Vote" button...
+
         if (isset($_POST['poll_answer'])) {
             // Update and increase the vote for the answer the user voted for
             $stmt = $con->prepare('UPDATE poll_answers SET votes = votes + 1 WHERE id = ?');
@@ -92,7 +91,7 @@ if (isset($_GET['id'])) {
     }
 
     input[type="submit"] {
-        background-color: #007bff;
+        background-color: #376ab7;
         color: #fff;
         padding: 10px 15px;
         border: none;
@@ -108,7 +107,7 @@ if (isset($_GET['id'])) {
         display: inline-block;
         margin-top: 10px;
         text-decoration: none;
-        background-color: #007bff;
+        background-color: #376ab7;
         color: #fff;
         padding: 10px 15px;
         border-radius: 3px;

@@ -19,10 +19,10 @@
     
     <!-- Login Button -->
     
-    <a href="public_html/login.html"><button class="log">Login</button></a>
+    <a href="public_html/login.php"><button class="log">Login</button></a>
     
     <!-- Register Button -->
-    <a href="public_html/register.html"><button class="top">Register</button></a>
+    <a href="public_html/register.php"><button class="top">Register</button></a>
 </div>
 <style>
     .tap {
@@ -47,11 +47,11 @@ button{
 
 }
 .log{
-    background-color: #007bff;
+    background-color: #376ab7;
     
 }
 .top{
-    background-color:#228B22;
+    background-color:#38b673;
 }
 p{
     font-size: 20px;

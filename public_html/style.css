@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 body{   
     background: #eee;  
 }  
@@ -12,8 +12,8 @@ body{
 }  
 #btn{  
     color: #fff;  
-    background: #337ab7;  
-    padding: 7px;  
+    background:  #376ab7;  
+    padding: 8px;  
     margin-left: 70%;  
 }  
 /* firstPage */
@@ -108,7 +108,7 @@ body{
 .home table tbody tr td.actions .view:hover {
     background-color: #31a364;
 }
-=======
+
 body {
   background: #eee;
 }
@@ -127,4 +127,4 @@ body {
   margin-left: 70%;
 }
 
->>>>>>> 0abcc90631cee7dd471074bf4e7ab8755af5aa39
+

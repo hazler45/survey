@@ -16,6 +16,10 @@ body{
     padding: 8px;  
     margin-left: 70%;  
 }  
+.backNav{
+    padding: 4rem;
+    font-size: 20px;
+}
 /* firstPage */
 .content {
     width: 1000px;

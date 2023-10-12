@@ -34,7 +34,9 @@ if (isset($_GET['id'])) {
 }
 ?>
 <?('Poll Results')?>
-
+<div class="backNav">
+        <a href="firstPage.php">Back</a>
+    </div>
 <div class="content poll-result">
     <h2><?=$poll['title']?></h2>
     <p><?=$poll['description']?></p>

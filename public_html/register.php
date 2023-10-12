@@ -5,7 +5,7 @@
         $password = $_POST['password'];
         $sql = "INSERT INTO user (username, password) VALUES ('$username', '$password')";
         if (mysqli_query($con, $sql)) {
-            header("Location: login.html"); 
+            header("Location: login.php"); 
     exit();
         } else {
             echo "<h3>Registration failed: " . mysqli_error($con) . "</h3>";
@@ -15,10 +15,12 @@
     <html>  
     <head>  
         <title>Register page</title>  
-     
         <link rel = "stylesheet" type = "text/css" href = "style.css">   
     </head>  
     <body>  
+    <div class="backNav">
+        <a href="/survey/">Back</a>
+    </div>
         <div id = "frm">  
             <h1>Register</h1>  
             <form name="f1" action = "register.php" onsubmit = "return validation()" method = "POST">  

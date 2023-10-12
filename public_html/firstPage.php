@@ -31,6 +31,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 </head>
 
 <body>
+<div class="backNav">
+        <a href="/survey/">Back</a>
+    </div>
     <div class="content home">
         <h2>Polls</h2>
         <a href="create.php" class="create-poll">Create Poll</a>

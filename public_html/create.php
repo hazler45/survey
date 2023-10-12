@@ -23,9 +23,14 @@ if (!empty($_POST)) {
             $sql = "INSERT INTO poll_answers (poll_id, title) VALUES ($poll_id, '$answer')";
             mysqli_query($con, $sql); 
         }
-
+        echo "<script>
+        alert('Poll created sucessfully');
+    </script>";
         $msg = 'Created Successfully!';
     } else {
+        echo "<script>
+        alert('Please fillup the form');
+    </script>";
         $msg = 'Error: ' . mysqli_error($con); 
     }
 }
@@ -33,6 +38,9 @@ if (!empty($_POST)) {
 mysqli_close($con); 
 ?>
 <html>
+<div class="backNav">
+        <a href="firstPage.php">Back</a>
+    </div>
 <div class="content update">
     <h2>Create Poll</h2>
     <form action="create.php" method="post">

@@ -33,6 +33,9 @@ if (isset($_POST['username']) && isset($_POST['pass'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="backNav">
+        <a href="/survey/">Back</a>
+    </div>
     <div id="frm">
         <h1>Login</h1>
         <form name="f1" action="login.php" method="POST">
